@@ -55,7 +55,11 @@ console.assert(arrayReverser(numbers).toString() === '6,5,101,3,11,7,9,18,4,12,1
 // 6.
 // Write a function that accepts an array argument
 // and returns the sum of all of the numbers in the array
-// A:
+
+// This is copy/pasted from the internetz and I'm still trying to understand how it works.
+
+var a = [1,2,3];
+var sum = a.reduce(function(a, b) { return a + b; }, 0);
 
 
 console.assert(sumArrayOfNumbers(numbers) === 177, {'message': 'sumArrayOfNumbers should return 177'});
@@ -64,7 +68,16 @@ console.assert(sumArrayOfNumbers(numbers) === 177, {'message': 'sumArrayOfNumber
 // 7.
 // Write a function that accepts an array argument
 // and returns an array of only the numbers greater than 10
-// A:
+
+  //   This doesn't work but it's the closest guess I could come up with.
+
+  function great10(input) {
+    var output = [];
+    if (input > 10) {
+      input.push(output);
+      return output;
+    }
+  }
 
 
 console.assert(numbersOver10(numbers).toString() === "12,18,11,101", {'message': 'numbersOver10 should return "12,18,11,101"'});
@@ -73,7 +86,7 @@ console.assert(numbersOver10(numbers).toString() === "12,18,11,101", {'message':
 // 8.
 // Write a function that accepts both an array and number argument
 // and returns an array of only the numbers greater than the number passed to the function
-// A:
+
 
 
 console.assert(numbersOverX(numbers, 15).toString() === "18,101", {'message': 'numbersOverX should return "18,101"'});
